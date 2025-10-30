@@ -1,0 +1,184 @@
+/* === ESTILO GERAL === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ff9d2f, #ff6126);
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === CABEÇALHO === */
+header {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  text-align: center;
+  padding: 30px 15px;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  backdrop-filter: blur(10px);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  animation: fadeDown 1s ease-out;
+}
+
+/* === CONTAINER DO CARDÁPIO === */
+.menu {
+  max-width: 850px;
+  width: 90%;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  animation: fadeUp 1s ease;
+}
+
+.menu:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* === TÍTULOS DAS SEÇÕES === */
+h2 {
+  position: relative;
+  padding-left: 15px;
+  margin-top: 35px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ff7b00;
+  text-transform: uppercase;
+}
+
+h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 6px;
+  height: 24px;
+  background-color: #ff7b00;
+  transform: translateY(-50%);
+  border-radius: 4px;
+}
+
+/* === ITENS DO CARDÁPIO === */
+.item {
+  padding: 15px 10px;
+  border-bottom: 1px solid #eee;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.item:hover {
+  background: #fff4e5;
+  transform: scale(1.02);
+  border-radius: 10px;
+}
+
+.linha {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.nome {
+  font-weight: 600;
+  font-size: 17px;
+  color: #333;
+}
+
+.descricao {
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+}
+
+.preco {
+  color: #ff7b00;
+  font-weight: 700;
+  font-size: 16px;
+  text-shadow: 0 0 3px rgba(255, 123, 0, 0.2);
+}
+
+/* === RODAPÉ === */
+footer {
+  margin-top: auto;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 18px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+}
+
+/* === ANIMAÇÕES === */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 600px) {
+  header {
+    font-size: 22px;
+    padding: 20px 10px;
+  }
+
+  .menu {
+    padding: 20px;
+  }
+
+  .linha {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .preco {
+    align-self: flex-end;
+    font-size: 15px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .nome {
+    font-size: 16px;
+  }
+
+  .descricao {
+    font-size: 13px;
+  }
+}
