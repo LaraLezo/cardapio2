@@ -21,13 +21,11 @@
     body {
       font-family: 'Montserrat', sans-serif;
       margin: 0;
-      /* Reduzindo o padding para telas pequenas para ocupar melhor o espaço */
       background: linear-gradient(180deg, #0b0b0b 0%, #141414 100%);
       color: var(--muted);
       display: flex;
       justify-content: center;
       padding: 16px 8px;
-      /* Ajuste inicial para mobile */
     }
 
     .wrap {
@@ -35,7 +33,6 @@
       max-width: 920px;
     }
 
-    /* ===== CABEÇALHO ===== */
     header {
       color: white;
       text-align: center;
@@ -54,13 +51,11 @@
       margin-top: 5px;
     }
 
-    /* ===== PAINEL ===== */
     .panel {
       background: var(--panel);
       padding: 24px 18px;
       border-radius: 12px;
       border: 1px solid rgba(255, 255, 255, 0.04);
-      /* Sombra mais suave para mobile */
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     }
 
@@ -74,7 +69,6 @@
     }
 
     .section {
-      /* Padrão para desktop: flex, com espaço */
       display: flex;
       justify-content: space-between;
       gap: 10px;
@@ -87,7 +81,6 @@
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-      /* Permite que o texto do item cresça e empurre o preço */
     }
 
     .dish {
@@ -96,19 +89,11 @@
       font-size: 1rem;
     }
 
-    .desc {
-      color: #b9b9b9;
-      font-size: 0.85rem;
-      margin-top: 4px;
-      line-height: 1.4;
-    }
-
     .price {
       color: var(--accent);
       font-weight: 700;
       font-size: 1rem;
       flex-shrink: 0;
-      /* Impede que o preço seja espremido */
       margin-left: 10px;
     }
 
@@ -119,9 +104,7 @@
       font-size: 0.8rem;
     }
 
-    /* ===== AJUSTES RESPONSIVOS (MOBILE) ===== */
     @media (max-width: 700px) {
-
       body {
         padding: 16px 12px;
       }
@@ -134,22 +117,17 @@
         padding: 18px 16px;
       }
 
-      /* IMPORTANTE: Volta para o flexbox simples (já que o grid estava quebrando) */
       .section {
         display: flex;
         justify-content: space-between;
-        /* Garante que o item e o preço se separem */
         align-items: center;
         padding: 12px 0;
       }
 
       .price {
-        /* Garante que o preço fique na linha do item */
         align-self: flex-start;
         margin-left: 15px;
-        /* Adiciona um espaço de respiro entre o texto e o preço */
         margin-top: 0;
-        /* Remove a margem vertical desnecessária */
       }
 
       .menu-title {
@@ -162,7 +140,6 @@
       }
     }
 
-    /* AJUSTES PARA TELAS MUITO PEQUENAS (Ex: iPhones SE) */
     @media (max-width: 400px) {
       body {
         padding: 12px 8px;
@@ -176,22 +153,12 @@
         padding: 16px 12px;
       }
 
-      /* CORREÇÃO CRÍTICA: Removendo o max-width que quebrava o texto */
-      .dish,
-      .desc {
-        max-width: none;
-      }
-
       .dish {
         font-size: 0.95rem;
       }
 
       .price {
         font-size: 0.95rem;
-      }
-
-      .desc {
-        font-size: 0.8rem;
       }
     }
   </style>
@@ -201,96 +168,166 @@
   <div class="wrap">
     <header>
       <h1>Espetinho da Esquina</h1>
-      <div>Espetinhos • Porções • Bebidas</div>
+      <div>Espetinhos • Comidas • Bebidas</div>
     </header>
 
-    <div class="panel"> 
-      
-      <div class="menu-title">Comidas</div>
-
+    <div class="panel">
+      <div class="menu-title">Espetinhos</div>
       <div class="section">
         <div class="left">
-          <div class="dish">Baião de Dois</div>
-          <div class="desc">Arroz, feijão e carne seca com queijo coalho.</div>
+          <div class="dish">Carne</div>
         </div>
-        <div class="price">R$ 20,00</div>
+        <div class="price">R$ 8,00</div>
       </div>
-
       <div class="section">
         <div class="left">
-          <div class="dish">Batata Frita</div>
+          <div class="dish">Coração de Galinha</div>
         </div>
-        <div class="price">R$ 20,00</div>
+        <div class="price">R$ 8,00</div>
+      </div>
+      <div class="section">
+        <div class="left">
+          <div class="dish">Coxinha de Frango</div>
+        </div>
+        <div class="price">R$ 8,00</div>
+      </div>
+      <div class="section">
+        <div class="left">
+          <div class="dish">Kafta</div>
+        </div>
+        <div class="price">R$ 8,00</div>
+      </div>
+      <div class="section">
+        <div class="left">
+          <div class="dish">Linguiça</div>
+        </div>
+        <div class="price">R$ 8,00</div>
+      </div>
+      <div class="section">
+        <div class="left">
+          <div class="dish">Tulipa</div>
+        </div>
+        <div class="price">R$ 8,00</div>
+      </div>
+      <div class="section">
+        <div class="left">
+          <div class="dish">Misto</div>
+        </div>
+        <div class="price">R$ 8,00</div>
+      </div>
+      <div class="section">
+        <div class="left">
+          <div class="dish">Panceta</div>
+        </div>
+        <div class="price">R$ 8,00</div>
+      </div>
+      <div class="section">
+        <div class="left">
+          <div class="dish">Peito de Frango</div>
+        </div>
+        <div class="price">R$ 8,00</div>
+      </div>
+      <div class="section">
+        <div class="left">
+          <div class="dish">Pão de Alho</div>
+        </div>
+        <div class="price">R$ 8,00</div>
+      </div>
+      <div class="section">
+        <div class="left">
+          <div class="dish">Queijo Coalho</div>
+        </div>
+        <div class="price">R$ 8,00</div>
+      </div>
+      <div class="section">
+        <div class="left">
+          <div class="dish">Medalhão de Frango</div>
+        </div>
+        <div class="price">R$ 13,00</div>
       </div>
 
+      <div class="menu-title">Acompanhamentos</div>
       <div class="section">
         <div class="left">
           <div class="dish">Farofa</div>
         </div>
-        <div class="price">R$ 20,00</div>
+        <div class="price">R$ 3,00</div>
       </div>
-
-      <div class="menu-title">Espetinhos</div>
-
       <div class="section">
         <div class="left">
-          <div class="dish">Espetinho de Carne</div>
-          <div class="desc">Carne bovina na brasa, tempero especial.</div>
+          <div class="dish">Porção de Feijão </div>
         </div>
-        <div class="price">R$ 8,00</div>
+        <div class="price">R$ 3,50</div>
       </div>
-
       <div class="section">
         <div class="left">
-          <div class="dish">Espetinho de Frango</div>
-          <div class="desc">Cubos de frango suculentos.</div>
-        </div>
-        <div class="price">R$ 8,00</div>
-      </div>
-
-      <div class="section">
-        <div class="left">
-          <div class="dish">Espetinho de Coxa de Frango</div>
-          <div class="desc">Coxas de Frango no ponto certo.</div>
-        </div>
-        <div class="price">R$ 9,00</div>
-      </div>
-
-      <div class="menu-title">Porções</div>
-      <div class="section">
-        <div class="left">
-          <div class="dish">Batata Frita</div>
-          <div class="desc">Porção crocante, servida quente.</div>
+          <div class="dish">Jantinha: Arroz, Vinagrete, Farofa</div>
         </div>
         <div class="price">R$ 12,00</div>
       </div>
-
       <div class="section">
         <div class="left">
-          <div class="dish">Mandioca Frita</div>
-          <div class="desc">Mandioca cozida e frita, crocante por fora.</div>
+          <div class="dish">Lanche de Pão de Alho: Espeto, Vinagrete, Molho</div>
         </div>
-        <div class="price">R$ 14,00</div>
+        <div class="price">R$ 20,00</div>
+      </div>
+      <div class="section">
+        <div class="left">
+          <div class="dish">Batata Frita</div>
+        </div>
+        <div class="price">R$ 20,00</div>
+      </div>
+      <div class="section">
+        <div class="left">
+          <div class="dish">Combo Jantinha: Arroz, Vinagrete, Farofa, Dois Espetos (Exeto Medalhão)</div>
+        </div>
+        <div class="price">R$ 24,00</div>
+      </div>
+      <div class="section">
+        <div class="left">
+          <div class="dish">Porção de Barriga de Porco</div>
+        </div>
+        <div class="price">R$ 25,00</div>
+      </div>
+
+
+
+      <div class="menu-title">Sobremesas</div>
+      <div class="section">
+        <div class="left">
+          <div class="dish">Chiclete</div>
+        </div>
+        <div class="price">R$ 3,00</div>
+      </div>
+      <div class="section">
+        <div class="left">
+          <div class="dish">Mousse Maracujá</div>
+        </div>
+        <div class="price">R$ 10,00</div>
+      </div>
+      <div class="section">
+        <div class="left">
+          <div class="dish">Pudim</div>
+        </div>
+        <div class="price">R$ 10,00</div>
       </div>
 
       <div class="menu-title">Bebidas</div>
       <div class="section">
         <div class="left">
           <div class="dish">Refrigerante (lata)</div>
-          <div class="desc">Coca, Guaraná, Sprite.</div>
         </div>
         <div class="price">R$ 6,00</div>
       </div>
-
       <div class="section">
         <div class="left">
           <div class="dish">Cerveja Long Neck</div>
-          <div class="desc">Diversas marcas, gelada!</div>
         </div>
         <div class="price">R$ 10,00</div>
       </div>
+    </div>
 
-    </div> <footer>© 2025 — Espetinho da Esquina</footer>
+    <footer>© 2025 — Espetinho da Esquina</footer>
   </div>
 </body>
 
