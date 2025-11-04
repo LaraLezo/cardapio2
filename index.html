@@ -161,14 +161,36 @@
         font-size: 0.95rem;
       }
     }
+
+    .logo-cabecalho {
+      width: 120px;
+      /* tamanho um pouco maior */
+      height: 120px;
+      /* igual à largura, para ficar perfeitamente redonda */
+      object-fit: cover;
+      /* garante que a imagem preencha o círculo */
+      border-radius: 50%;
+      /* deixa redonda */
+      display: block;
+      /* centraliza facilmente */
+      margin: 0 auto 12px;
+      /* centraliza e dá espaçamento abaixo */
+      border: 2px solid #ff8c2b;
+      /* borda sutil combinando com o tema */
+      box-shadow: 0 0 10px rgba(255, 140, 43, 0.4);
+      /* brilho suave */
+    }
   </style>
 </head>
 
 <body>
   <div class="wrap">
     <header>
-      <h1>Espetinho Fumaça Boa</h1>
-      <div>Espetinhos • Comidas • Bebidas</div>
+      <img src="logo.jpeg" class="logo-cabecalho">
+
+      <h1 class="titulo-cardapio">Cardápio</h1>
+
+
     </header>
 
     <div class="panel">
